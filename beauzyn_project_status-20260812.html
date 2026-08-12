@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beauzyn × IMEI | Project Status & Next Steps</title>
+  <style>
+    :root{--bg:#f6f7f9;--card:#fff;--text:#18212b;--muted:#697586;--line:#e5e9ef;--brand:#183b56;--brand2:#2d6a73;--ok:#2f7d4a;--warn:#a46b18;--soft:#eef3f6}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+    .wrap{max-width:1160px;margin:auto;padding:28px 20px 56px}
+    .hero{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;border-radius:24px;padding:34px;box-shadow:0 18px 50px rgba(24,59,86,.16)}
+    .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;opacity:.8}
+    h1{font-size:34px;line-height:1.15;margin:8px 0}
+    .sub{font-size:17px;opacity:.9;max-width:760px}
+    .hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+    .pill{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.22);padding:7px 11px;border-radius:999px;font-size:13px}
+    .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0 28px}
+    .kpi,section{background:var(--card);border:1px solid var(--line)}
+    .kpi{border-radius:18px;padding:18px}
+    .kpi b{display:block;font-size:21px;margin-top:4px}
+    .kpi span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+    section{border-radius:22px;padding:26px;margin:16px 0}
+    h2{font-size:22px;margin:0 0 18px}
+    h3{font-size:16px;margin:18px 0 8px}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    ul{margin:8px 0 0;padding-left:20px}
+    li{margin:6px 0}
+    .note{background:var(--soft);border-left:4px solid var(--brand2);padding:14px 16px;border-radius:12px;margin-top:16px}
+    .status-row{display:grid;grid-template-columns:170px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--line)}
+    .status-row:first-of-type{border-top:0}
+    .status-label{font-weight:700}
+    .tag{display:inline-block;padding:4px 9px;border-radius:999px;font-size:12px;font-weight:700;margin-right:6px}
+    .done{background:#eaf5ee;color:var(--ok)}
+    .now{background:#fff5df;color:var(--warn)}
+    .next{background:#eef3f6;color:var(--brand)}
+    .timeline{display:grid;gap:0;margin-top:18px}
+    .step{display:grid;grid-template-columns:40px 1fr;gap:14px;position:relative;padding-bottom:18px}
+    .step:not(:last-child):before{content:"";position:absolute;left:19px;top:36px;bottom:0;width:2px;background:var(--line)}
+    .dot{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;background:var(--soft);color:var(--brand)}
+    .dot.ok{background:#eaf5ee;color:var(--ok)}
+    .dot.active{background:#fff0c8;color:var(--warn)}
+    .step h4{margin:2px 0 4px;font-size:15px}
+    .step p{margin:0;color:var(--muted);font-size:14px}
+    .callout{background:#fff9ec;border:1px solid #f0dfb9;border-radius:16px;padding:18px}
+    .footer{color:var(--muted);font-size:12px;text-align:center;margin-top:24px}
+    .print{display:flex;justify-content:flex-end;margin:14px 0}
+    button{border:0;background:var(--brand);color:white;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    @media(max-width:850px){.grid4{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.status-row{grid-template-columns:1fr}.hero{padding:26px}h1{font-size:28px}}
+    @media(max-width:520px){.grid4{grid-template-columns:1fr}}
+    @media print{body{background:white}.wrap{max-width:none;padding:0}.print{display:none}}
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <div class="print"><button onclick="window.print()">Print / Save as PDF</button></div>
+
+  <header class="hero">
+    <div class="eyebrow">IMEI International Product Development</div>
+    <h1>Beauzyn Day & Night Cream Project</h1>
+    <div class="sub">Project requirements, IMEI technical notes, current status and development roadmap for the Pakistan market.</div>
+    <div class="hero-meta">
+      <span class="pill">Market: Pakistan</span>
+      <span class="pill">2 SKUs</span>
+      <span class="pill">30 ml Airless</span>
+      <span class="pill">Project officially started</span>
+      <span class="pill">Updated: 12 Aug 2026</span>
+    </div>
+  </header>
+
+  <div class="grid4">
+    <div class="kpi"><span>Development Fee</span><b>Received ✓</b></div>
+    <div class="kpi"><span>Phase 1</span><b>1,000 pcs / SKU</b></div>
+    <div class="kpi"><span>Sample Allocation</span><b>6 pcs / formula</b></div>
+    <div class="kpi"><span>Launch Timing</span><b>To Reconfirm</b></div>
+  </div>
+
+  <section>
+    <h2>A. Customer Requirements</h2>
+    <div class="two">
+      <div>
+        <h3>Advanced Repair Night Cream</h3>
+        <ul>
+          <li>Target melasma, dark spots, uneven skin tone and signs of premature aging.</li>
+          <li>Support overnight repair and the skin barrier.</li>
+          <li>Gentle positioning for sensitive skin; minimize irritation, burning, itching and redness.</li>
+          <li>Non-comedogenic direction with sebum and pore-appearance care.</li>
+          <li>Lightweight and non-greasy texture suitable for hot and humid weather.</li>
+          <li>Hero ingredients must support future brand positioning and ingredient education.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Advanced Protective Day Cream</h3>
+        <ul>
+          <li>Target SPF50+ / PA++++ with UVA / UVB protection.</li>
+          <li>HEV / blue-light protection direction and daytime antioxidant support.</li>
+          <li>Designed for Pakistan's extreme heat, humidity and perspiration.</li>
+          <li>Breathable, lightweight, dry-touch and non-greasy finish.</li>
+          <li>Sweat-resistant direction without a heavy “mask” feeling or obvious melting sensation.</li>
+          <li>Non-comedogenic direction with sebum and pore-appearance care.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note"><strong>Branding requirement:</strong> Beauzyn would like the final Hero / Key Active Ingredients to be confirmed before development progresses too far, because these ingredients will be used for brand positioning, dermatologist communication and market education in Pakistan.</div>
+  </section>
+
+  <section>
+    <h2>B. IMEI Technical Notes</h2>
+    <div class="two">
+      <div>
+        <h3>Formulation approach</h3>
+        <ul>
+          <li>IMEI R&D will evaluate all requirements as one integrated formulation system rather than simply combining individual claims.</li>
+          <li>Some targets involve technical trade-offs, especially high UV protection, sweat resistance, lightweight skin feel, barrier comfort and non-comedogenic positioning.</li>
+          <li>We will recommend the best balance for performance, stability, skin feel and the Pakistan climate.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Hero ingredient evaluation</h3>
+        <ul>
+          <li>Technical feasibility and formulation compatibility.</li>
+          <li>Recommended effective use level and safety considerations.</li>
+          <li>Raw-material supply stability, MOQ and lead time.</li>
+          <li>Evidence / technical support available from the supplier.</li>
+          <li>Differentiation and marketing value for the Pakistan market.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Current ingredient directions under evaluation</h3>
+    <div class="two">
+      <div class="note"><strong>Night Cream:</strong><br>Snow Peptide 360 · Tranexamic Acid · Salmon-derived repair ingredient · Antarctic Marine Glycoprotein · additional brightening / barrier-support actives after R&D review.</div>
+      <div class="note"><strong>Day Cream:</strong><br>Hydroxyphenoxy Propionic Acid + Ethyl Vitamin C brightening concept · Uvinul A Plus · Tinosorb S · Tinosorb M · additional antioxidant / barrier / thermal-stress support after R&D review.</div>
+    </div>
+
+    <div class="note"><strong>Testing note:</strong> At the current sample-development stage, SPF / PA performance will be evaluated using instrument-based testing. Final claims and commercial testing requirements will be confirmed separately before launch.</div>
+  </section>
+
+  <section>
+    <h2>C. Current Project Status</h2>
+    <div class="status-row"><div class="status-label">Commercial setup</div><div><span class="tag done">COMPLETED</span>USD 200 Formula Development Fee received. Project officially activated.</div></div>
+    <div class="status-row"><div class="status-label">Customer brief</div><div><span class="tag done">COMPLETED</span>Core product, climate, texture, safety and branding requirements received.</div></div>
+    <div class="status-row"><div class="status-label">R&D review</div><div><span class="tag now">IN PROGRESS</span>Technical feasibility, ingredient architecture and formulation trade-offs are being reviewed.</div></div>
+    <div class="status-row"><div class="status-label">Hero ingredients</div><div><span class="tag next">NEXT</span>IMEI will propose the recommended Hero / Key Active Ingredients for both SKUs for Beauzyn's confirmation.</div></div>
+    <div class="status-row"><div class="status-label">First samples</div><div><span class="tag next">NEXT</span>Laboratory formulation and first sample preparation will proceed after the initial technical direction is confirmed.</div></div>
+    <div class="status-row"><div class="status-label">Packaging</div><div><span class="tag now">PARALLEL</span>30 ml airless bottle selection and MOQ / lead-time confirmation can proceed in parallel.</div></div>
+    <div class="status-row"><div class="status-label">Sample shipping</div><div><span class="tag next">PENDING</span>Customer has no FedEx / DHL account; Alibaba logistics / Trade Assurance route to be confirmed before shipment.</div></div>
+  </section>
+
+  <section>
+    <h2>D. Development Timeline & Next Steps</h2>
+    <div class="callout"><strong>Timeline update required:</strong> The original August 2026 soft-launch target is no longer practical. A new Phase-1 launch target should be reconfirmed so IMEI can build the development and production schedule backward from the desired launch date.</div>
+
+    <div class="timeline">
+      <div class="step"><div class="dot ok">1</div><div><h4>Project Activation — Completed</h4><p>Development fee received and project officially opened.</p></div></div>
+      <div class="step"><div class="dot active">2</div><div><h4>R&D Technical Review — Current Stage</h4><p>Review all product requirements, technical trade-offs, climate suitability and ingredient feasibility.</p></div></div>
+      <div class="step"><div class="dot">3</div><div><h4>Hero Ingredient Proposal & Confirmation</h4><p>IMEI proposes the key active ingredient architecture for Day and Night Cream; Beauzyn confirms positioning direction.</p></div></div>
+      <div class="step"><div class="dot">4</div><div><h4>First Formula Development & Sampling</h4><p>Laboratory formulation, stability-oriented design and first sample preparation.</p></div></div>
+      <div class="step"><div class="dot">5</div><div><h4>Sample Shipment to Pakistan</h4><p>Up to 6 laboratory sample units per formula; international freight paid by Beauzyn.</p></div></div>
+      <div class="step"><div class="dot">6</div><div><h4>Beauzyn + Dermatologist Evaluation</h4><p>Evaluate texture, skin feel, absorption, tolerance and overall product direction.</p></div></div>
+      <div class="step"><div class="dot">7</div><div><h4>Formula Adjustment, if Required</h4><p>Up to 5 adjustment rounds within the agreed development scope. Revised samples targeted within 2 weeks after clear feedback is received.</p></div></div>
+      <div class="step"><div class="dot">8</div><div><h4>Final Formula Approval</h4><p>Freeze formula direction and prepare key active ingredient documentation.</p></div></div>
+      <div class="step"><div class="dot">9</div><div><h4>Packaging & Phase-1 Production Preparation</h4><p>Confirm 30 ml airless bottle, artwork, commercial test requirements and production readiness.</p></div></div>
+      <div class="step"><div class="dot">10</div><div><h4>Phase-1 Production</h4><p>Target: 1,000 pcs per SKU. Remaining packaging can be reserved for subsequent production subject to final commercial agreement.</p></div></div>
+    </div>
+
+    <div class="note"><strong>Information requested from Beauzyn:</strong><br>Please confirm your updated preferred <strong>Phase-1 launch target date</strong>. IMEI will then prepare a more specific development, approval, packaging and production timeline for both teams to follow.</div>
+  </section>
+
+  
+
+  <section>
+    <h2>E. Beauzyn Feedback</h2>
+    <p style="color:var(--muted);margin-top:-4px">
+      Please use the fields below to share your feedback, priorities, or any requested changes for this project.
+    </p>
+
+    <form id="feedbackForm">
+      <div class="two">
+        <div>
+          <label for="launch"><strong>Preferred Phase-1 Launch Target</strong></label>
+          <input id="launch" name="launch_target" type="text" placeholder="e.g. November 2026"
+            style="width:100%;margin-top:8px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit">
+        </div>
+        <div>
+          <label for="priority"><strong>Top Priority</strong></label>
+          <select id="priority" name="top_priority"
+            style="width:100%;margin-top:8px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;background:white">
+            <option value="">Please select</option>
+            <option>Hero Ingredients / Brand Positioning</option>
+            <option>Texture / Skin Feel</option>
+            <option>SPF / PA Performance</option>
+            <option>Heat / Humidity Stability</option>
+            <option>Sensitive Skin / Barrier Safety</option>
+            <option>Packaging</option>
+            <option>Launch Timeline</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="margin-top:16px">
+        <label for="feedback"><strong>Comments / Feedback</strong></label>
+        <textarea id="feedback" name="feedback" rows="7"
+          placeholder="Please share your comments, priorities, requested changes, or questions here..."
+          style="width:100%;margin-top:8px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;resize:vertical"></textarea>
+      </div>
+
+      <div style="margin-top:14px">
+        <label for="approval"><strong>Current Direction</strong></label>
+        <select id="approval" name="current_direction"
+          style="width:100%;margin-top:8px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;background:white">
+          <option value="">Please select</option>
+          <option>I agree with the current direction</option>
+          <option>I agree, with minor comments</option>
+          <option>I would like to discuss revisions before proceeding</option>
+        </select>
+      </div>
+
+      <div style="margin-top:18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <button id="submitFeedbackBtn" type="submit">Submit Feedback</button>
+        <span id="feedbackStatus" style="font-size:14px;color:var(--muted)"></span>
+      </div>
+    </form>
+
+    <div class="note">
+      <strong>Project:</strong> BEAUZYN-001 · <strong>Customer:</strong> Beauzyn<br>
+      Your feedback will be sent directly to IMEI's project record.
+    </div>
+  </section>
+
+  <script>
+    const FEEDBACK_ENDPOINT = "https://script.google.com/macros/s/AKfycbydfrg0gaMIZzliA_ePNewKE4FMyxGSlMMIvRFSxtH13jPVK9ii6I5o6vNxY6KhmlyQ/exec";
+
+    document.getElementById("feedbackForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const button = document.getElementById("submitFeedbackBtn");
+      const status = document.getElementById("feedbackStatus");
+
+      const payload = {
+        form_type: "project_feedback",
+        submitted_at: new Date().toISOString(),
+        project_id: "BEAUZYN-001",
+        customer: "Beauzyn",
+        launch_target: document.getElementById("launch").value.trim(),
+        top_priority: document.getElementById("priority").value,
+        current_direction: document.getElementById("approval").value,
+        feedback: document.getElementById("feedback").value.trim()
+      };
+
+      if (!payload.launch_target && !payload.top_priority && !payload.current_direction && !payload.feedback) {
+        status.textContent = "Please enter at least one feedback item before submitting.";
+        status.style.color = "#a46b18";
+        return;
+      }
+
+      button.disabled = true;
+      button.textContent = "Submitting...";
+      status.textContent = "Sending your feedback to IMEI...";
+      status.style.color = "#697586";
+
+      try {
+        const response = await fetch(FEEDBACK_ENDPOINT, {
+          method: "POST",
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
+        if (result.status === "success") {
+          status.textContent = "Thank you. Your feedback has been submitted successfully.";
+          status.style.color = "#2f7d4a";
+          button.textContent = "Submitted ✓";
+          button.disabled = true;
+        } else {
+          throw new Error(result.message || "Submission failed.");
+        }
+      } catch (error) {
+        console.error(error);
+        status.textContent = "We couldn't submit your feedback. Please try again or contact IMEI.";
+        status.style.color = "#a94442";
+        button.disabled = false;
+        button.textContent = "Submit Feedback";
+      }
+    });
+  </script>
+  <footer class="footer">IMEI Chemical Enterprise Ltd. · International Product Development · Project information subject to technical evaluation and final confirmation.</footer>
+</main>
+</body>
+</html>
